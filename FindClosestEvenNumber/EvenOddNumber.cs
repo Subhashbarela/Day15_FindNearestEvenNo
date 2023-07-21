@@ -8,7 +8,12 @@ namespace FindClosestEvenNumber
 {
     public class EvenOddNumber
     {
-        public void FindEven(int[] arr)
+        int[] arr;
+        public EvenOddNumber(int[] arr)
+        {
+            this.arr = arr;
+        }
+        public void FindEven()
         {
             Console.WriteLine("Enter the number that you want find Closest Even");
             int Murli = int.Parse(Console.ReadLine());
