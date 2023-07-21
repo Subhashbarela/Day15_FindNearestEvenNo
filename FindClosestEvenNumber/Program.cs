@@ -10,7 +10,7 @@ namespace FindClosestEvenNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1:Find Closest Even \n2: Describe type Infomartion");
+            Console.WriteLine("1:Find Closest Even \n2: Describe type Infomartion \n 3: Create Default Constructo and Fetch");
             Console.WriteLine("Enter the choice");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -28,14 +28,19 @@ namespace FindClosestEvenNumber
                         reflection.FetchDataOfEvenClass();
                         break;
                     }
+                case 3:
+                    {
+                        ReflectionClass reflection = new ReflectionClass();
+                        reflection.FetchConstructor();
+                        break;
+                    }
                 default:
                     {
                         Console.WriteLine("Please insert valid input");
                         break;
                     }
             }
-
-
+            Console.ReadLine();
         }
     }
 }
