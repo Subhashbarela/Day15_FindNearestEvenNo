@@ -11,7 +11,8 @@ namespace FindClosestEvenNumber
         static void Main(string[] args)
         {
             EvenOddNumber evenOdd=new EvenOddNumber();
-            evenOdd.FindEven();
+            int[] arr = { 8,10, 12,16, 18, 22, 24, 26, 28, };
+            evenOdd.FindEven(arr);
         }
     }
 }

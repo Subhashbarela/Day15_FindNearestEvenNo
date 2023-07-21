@@ -8,17 +8,24 @@ namespace FindClosestEvenNumber
 {
     public class EvenOddNumber
     {
-        public void FindEven()
+        public void FindEven(int[] arr)
         {
             Console.WriteLine("Enter the number that you want find Closest Even");
-            int Murli=int.Parse(Console.ReadLine());
-            if(Murli%2==0 )
+            int Murli = int.Parse(Console.ReadLine());
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(Murli);
-            }
-            else
-            {
-                Console.WriteLine(Murli+1);
+                if (Murli <= arr[i])
+                {
+                    if (arr[i] % 2 == 0)
+                    {
+                        Console.WriteLine(arr[i]);
+                    }
+                    else
+                    {
+                        Console.WriteLine(arr[i] + 1);
+                    }
+                    break;
+                }
             }
         }
     }
